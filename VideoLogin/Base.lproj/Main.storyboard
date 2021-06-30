@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evj-Wi-TLy" customClass="PlayerView" customModule="VideoLogin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONu-sg-Vlj">
+                                        <rect key="frame" x="70" y="291" width="274" height="211"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="to-do-list 128" translatesAutoresizingMaskIntoConstraints="NO" id="uaK-m0-dMg">
+                                                <rect key="frame" x="105" y="23" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="LWX-2q-LgB"/>
+                                                    <constraint firstAttribute="width" constant="64" id="rcm-y8-sEy"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Journaley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-DM-icd">
+                                                <rect key="frame" x="85" y="110" width="126.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Mui-DM-icd" firstAttribute="centerX" secondItem="uaK-m0-dMg" secondAttribute="centerX" constant="11.25" id="36f-Kt-9kc"/>
+                                            <constraint firstItem="uaK-m0-dMg" firstAttribute="top" secondItem="ONu-sg-Vlj" secondAttribute="top" constant="23" id="5eb-2L-4PA"/>
+                                            <constraint firstItem="Mui-DM-icd" firstAttribute="top" secondItem="uaK-m0-dMg" secondAttribute="bottom" constant="23" id="P8j-ja-tQL"/>
+                                            <constraint firstItem="uaK-m0-dMg" firstAttribute="centerX" secondItem="ONu-sg-Vlj" secondAttribute="centerX" id="RLD-h5-pje"/>
+                                            <constraint firstItem="Mui-DM-icd" firstAttribute="centerX" secondItem="ONu-sg-Vlj" secondAttribute="centerX" constant="11.25" id="U7Q-CI-xqO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ONu-sg-Vlj" secondAttribute="bottom" constant="394" id="Bpv-tg-3I5"/>
+                                    <constraint firstItem="ONu-sg-Vlj" firstAttribute="centerX" secondItem="evj-Wi-TLy" secondAttribute="centerX" id="Ez2-TP-2Te"/>
+                                    <constraint firstItem="ONu-sg-Vlj" firstAttribute="top" secondItem="evj-Wi-TLy" secondAttribute="top" constant="291" id="PQo-m9-ama"/>
+                                    <constraint firstItem="ONu-sg-Vlj" firstAttribute="leading" secondItem="evj-Wi-TLy" secondAttribute="leading" constant="70" id="eA7-B0-7dd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="evj-Wi-TLy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HbW-hD-Uab"/>
+                            <constraint firstItem="evj-Wi-TLy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sjg-vz-bcZ"/>
+                            <constraint firstAttribute="trailing" secondItem="evj-Wi-TLy" secondAttribute="trailing" id="krg-Ng-1mg"/>
+                            <constraint firstAttribute="bottom" secondItem="evj-Wi-TLy" secondAttribute="bottom" id="rPE-Ri-O5k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerLayerView" destination="evj-Wi-TLy" id="PL4-r2-Ayc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="to-do-list 128" width="128" height="128"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
